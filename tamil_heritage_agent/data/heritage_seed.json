@@ -1,0 +1,120 @@
+{
+  "monuments": [
+    {
+      "id": "brihadeeswarar-temple",
+      "name_ta": "பிரகதீஸ்வரர் கோவில்",
+      "name_en": "Brihadeeswarar Temple",
+      "location": "Thanjavur, Tamil Nadu",
+      "dynasty": "Chola",
+      "period": "c. 1003-1010 CE",
+      "style": "Dravidian Architecture",
+      "patron": "Rajaraja Chola I",
+      "facts": [
+        "A major Shiva temple in Thanjavur.",
+        "Associated with Rajaraja Chola I.",
+        "Part of the UNESCO Great Living Chola Temples grouping."
+      ],
+      "related": ["Gangaikonda Cholapuram Temple", "Airavatesvara Temple", "Shore Temple"],
+      "sources": ["UNESCO World Heritage documentation", "Archaeological Survey of India records"]
+    },
+    {
+      "id": "shore-temple",
+      "name_ta": "கடற்கரை கோவில்",
+      "name_en": "Shore Temple",
+      "location": "Mahabalipuram, Tamil Nadu",
+      "dynasty": "Pallava",
+      "period": "8th century CE",
+      "style": "Dravidian Architecture",
+      "patron": "Narasimhavarman II Rajasimha",
+      "facts": [
+        "Located near the Bay of Bengal at Mahabalipuram.",
+        "Associated with Pallava stone temple architecture.",
+        "Part of the UNESCO Group of Monuments at Mahabalipuram."
+      ],
+      "related": ["Pancha Rathas", "Arjuna's Penance", "Brihadeeswarar Temple"],
+      "sources": ["UNESCO World Heritage documentation", "Archaeological Survey of India records"]
+    },
+    {
+      "id": "meenakshi-temple",
+      "name_ta": "மீனாட்சி அம்மன் கோவில்",
+      "name_en": "Meenakshi Amman Temple",
+      "location": "Madurai, Tamil Nadu",
+      "dynasty": "Pandya and Nayaka",
+      "period": "Expanded substantially during the Nayaka period",
+      "style": "Dravidian Architecture",
+      "patron": "Pandya and Nayaka rulers",
+      "facts": [
+        "A major temple complex in Madurai.",
+        "Known for large gopurams and sculptural programs.",
+        "Closely tied to Tamil devotional and urban culture."
+      ],
+      "related": ["Brihadeeswarar Temple", "Srirangam Temple", "Ramanathaswamy Temple"],
+      "sources": ["Temple architecture references", "Tamil Nadu heritage records"]
+    },
+    {
+      "id": "konark-sun-temple",
+      "name_ta": "கோணார்க் சூரிய கோவில்",
+      "name_en": "Konark Sun Temple",
+      "location": "Konark, Odisha",
+      "dynasty": "Eastern Ganga",
+      "period": "13th century CE",
+      "style": "Kalinga / Nagara Architecture",
+      "patron": "Narasimhadeva I",
+      "facts": [
+        "Dedicated to Surya, the sun god.",
+        "Conceived as a monumental stone chariot.",
+        "A UNESCO World Heritage Site."
+      ],
+      "related": ["Lingaraja Temple", "Jagannath Temple", "Sun temples of India"],
+      "sources": ["UNESCO World Heritage documentation", "Archaeological Survey of India records"]
+    }
+  ],
+  "dynasties": [
+    {
+      "id": "chola",
+      "name_ta": "சோழர்",
+      "name_en": "Chola",
+      "period": "c. 9th-13th century CE for the Imperial Cholas",
+      "region": "Tamilakam and wider South India",
+      "architecture": "Large-scale Dravidian stone temples, high vimanas, inscriptions, bronze art",
+      "sources": ["Academic Chola studies", "ASI temple records"]
+    },
+    {
+      "id": "pallava",
+      "name_ta": "பல்லவர்",
+      "name_en": "Pallava",
+      "period": "c. 4th-9th century CE",
+      "region": "Northern Tamil Nadu and adjoining regions",
+      "architecture": "Rock-cut shrines, structural temples, early Dravidian experimentation",
+      "sources": ["Mahabalipuram UNESCO records", "South Indian architecture references"]
+    },
+    {
+      "id": "pandya",
+      "name_ta": "பாண்டியர்",
+      "name_en": "Pandya",
+      "period": "Ancient to medieval Tamil dynasty with multiple phases",
+      "region": "Southern Tamil Nadu",
+      "architecture": "Temple expansion, gopuram-centered complexes, Madurai sacred urbanism",
+      "sources": ["Tamil historical records", "Temple architecture references"]
+    }
+  ],
+  "styles": [
+    {
+      "id": "dravidian",
+      "name_ta": "திராவிடக் கட்டிடக்கலை",
+      "name_en": "Dravidian Architecture",
+      "features": ["Vimana over the sanctum", "Gopuram gateways", "Mandapas", "Enclosed temple complexes"],
+      "regions": ["Tamil Nadu", "Karnataka", "Andhra Pradesh", "Telangana", "Kerala"],
+      "sources": ["Temple architecture references", "ASI records"]
+    },
+    {
+      "id": "nagara",
+      "name_ta": "நாகரக் கட்டிடக்கலை",
+      "name_en": "Nagara Architecture",
+      "features": ["Curvilinear shikhara", "Raised temple platforms", "Northern and eastern regional variations"],
+      "regions": ["North India", "Eastern India", "Central India"],
+      "sources": ["Indian architecture references", "ASI records"]
+    }
+  ]
+}
+

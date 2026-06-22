@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Tamil Heritage AI</title>
+    <link rel="stylesheet" href="/static/styles.css?v=accessible-1" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to chat</a>
+    <div class="app-shell">
+      <aside class="sidebar" aria-label="Workspace controls">
+        <div class="brand">
+          <img src="/static/assets/temple-hero.png" alt="Tamil temple architecture illustration" />
+          <div>
+            <p class="eyebrow" data-i18n="brandEyebrow">தமிழ் முதலில்</p>
+            <h1>Tamil Heritage AI</h1>
+          </div>
+        </div>
+
+        <div class="mode-panel">
+          <label for="language" data-i18n="languageLabel">Language</label>
+          <select id="language">
+            <option value="tamil">தமிழ்</option>
+            <option value="english">English</option>
+            <option value="bilingual">தமிழ் + English</option>
+          </select>
+        </div>
+
+        <div class="mode-panel">
+          <label for="mode" data-i18n="modeLabel">Mode</label>
+          <select id="mode">
+            <option value="heritage_explorer" data-label-ta="பாரம்பரிய ஆராய்ச்சி" data-label-en="Heritage Explorer">Heritage Explorer</option>
+            <option value="research" data-label-ta="ஆராய்ச்சி" data-label-en="Research">Research</option>
+            <option value="timeline" data-label-ta="காலவரிசை" data-label-en="Timeline">Timeline</option>
+            <option value="quiz" data-label-ta="வினாடி வினா" data-label-en="Quiz">Quiz</option>
+            <option value="compare" data-label-ta="ஒப்பீடு" data-label-en="Compare">Compare</option>
+          </select>
+        </div>
+
+        <div class="quick-prompts">
+          <p class="sr-only" id="quick-prompts-label">Quick prompt buttons</p>
+          <button type="button" data-label-ta="சோழர் கட்டிடக்கலை" data-label-en="Chola Architecture" data-prompt-ta="சோழர் கட்டிடக்கலையை பற்றி சொல்லுங்கள்" data-prompt-en="Tell me about Chola architecture">Chola Architecture</button>
+          <button type="button" data-label-ta="பிரகதீஸ்வரர்" data-label-en="Brihadeeswarar" data-prompt-ta="பிரகதீஸ்வரர் கோவில் பற்றி விளக்குங்கள்" data-prompt-en="Explain Brihadeeswarar Temple">Brihadeeswarar</button>
+          <button type="button" data-label-ta="திராவிடம் vs நாகரம்" data-label-en="Dravidian vs Nagara" data-prompt-ta="திராவிடக் கட்டிடக்கலை மற்றும் நாகரக் கட்டிடக்கலையை ஒப்பிடுங்கள்" data-prompt-en="Compare Dravidian and Nagara architecture">Dravidian vs Nagara</button>
+          <button type="button" data-label-ta="கடற்கரை கோவில் காலவரிசை" data-label-en="Shore Temple Timeline" data-prompt-ta="கடற்கரை கோவிலின் காலவரிசையை சொல்லுங்கள்" data-prompt-en="Show the Shore Temple timeline">Shore Temple Timeline</button>
+        </div>
+
+        <button id="voice-test-button" class="test-voice-button" type="button" data-i18n="testVoiceButton">Test voice</button>
+
+        <div class="status-card" role="status" aria-live="polite" aria-atomic="true">
+          <span id="service-dot" class="dot" aria-hidden="true"></span>
+          <div>
+            <strong id="service-label">Checking service</strong>
+            <p id="service-note">Live agent when quota is available. Demo fallback is built in.</p>
+          </div>
+        </div>
+      </aside>
+
+      <main id="main-content" class="chat-area" tabindex="-1">
+        <section class="hero">
+          <div>
+            <p class="eyebrow" data-i18n="heroEyebrow">Multi-agent cultural heritage assistant</p>
+            <h2 data-i18n="heroTitle">Ask about temples, dynasties, monuments, and architecture.</h2>
+          </div>
+          <img src="/static/assets/temple-hero.png" alt="" />
+        </section>
+
+        <section id="messages" class="messages" aria-label="Conversation" aria-live="polite" aria-relevant="additions">
+          <article class="message assistant">
+            <div class="avatar" aria-hidden="true">AI</div>
+            <div id="welcome-bubble" class="bubble">
+              <p class="section-title">தமிழில் விளக்கம்</p>
+              <p>வணக்கம். இந்தியக் கட்டிடக்கலை, கோவில்கள், வம்சங்கள், நினைவுச்சின்னங்கள், காலவரிசை, மற்றும் கல்வி வினாக்கள் பற்றி கேளுங்கள்.</p>
+            </div>
+          </article>
+        </section>
+
+        <form id="chat-form" class="composer">
+          <label class="sr-only" for="message-input" data-i18n="messageLabel">Message</label>
+          <textarea id="message-input" rows="2" aria-describedby="composer-help" placeholder="சோழர் கட்டிடக்கலையை பற்றி சொல்லுங்கள்"></textarea>
+          <p id="composer-help" class="sr-only" data-i18n="composerHelp">Type your question. Press Enter to send, or Shift Enter for a new line.</p>
+          <div class="composer-actions">
+            <button id="mic-button" class="icon-button" type="button" aria-label="Voice input" title="Voice input">
+              <span aria-hidden="true">◉</span>
+            </button>
+            <label class="voice-toggle">
+              <input id="voice-output" type="checkbox" />
+              <span data-i18n="voiceLabel">Voice</span>
+            </label>
+            <button type="submit" data-i18n="askButton">Ask</button>
+          </div>
+        </form>
+      </main>
+
+      <aside class="inspector" aria-label="Answer details">
+        <section>
+          <h3 data-i18n="timelineTitle">Timeline</h3>
+          <ul id="timeline-list">
+            <li data-i18n="timelineEmpty">Ask a question to build a timeline.</li>
+          </ul>
+        </section>
+        <section>
+          <h3 data-i18n="relatedTitle">Related Monuments</h3>
+          <ul id="related-list">
+            <li>Brihadeeswarar Temple</li>
+            <li>Shore Temple</li>
+            <li>Konark Sun Temple</li>
+          </ul>
+        </section>
+        <section>
+          <h3 data-i18n="citationsTitle">Citations</h3>
+          <ul id="citation-list">
+            <li>UNESCO documentation</li>
+            <li>Archaeological Survey of India records</li>
+          </ul>
+        </section>
+      </aside>
+    </div>
+
+    <script src="/static/app.js?v=audio-player-2"></script>
+  </body>
+</html>
